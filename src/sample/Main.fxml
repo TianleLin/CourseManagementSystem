@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="670.0" style="-fx-background-color: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+   <children>
+      <VBox prefHeight="77.0" prefWidth="192.0">
+         <children>
+            <VBox prefHeight="187.0" prefWidth="181.0">
+               <children>
+                  <JFXButton buttonType="RAISED" prefHeight="200.0" prefWidth="195.0" text="Course Management">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font></JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="26.0" layoutY="73.0" prefHeight="378.0" prefWidth="101.0">
+         <children>
+            <VBox prefHeight="14.0" prefWidth="107.0" />
+            <JFXButton fx:id="studentButton" buttonType="RAISED" onMouseClicked="#handleClicks" prefHeight="36.0" prefWidth="114.0" style="-fx-background-color: #FDFDFD;" text="Student" />
+            <VBox prefHeight="14.0" prefWidth="107.0" />
+            <JFXButton fx:id="teacherButton" buttonType="RAISED" onMouseClicked="#handleClicks" prefHeight="36.0" prefWidth="114.0" style="-fx-background-color: #FDFDFD;" text="Teacher" />
+            <VBox prefHeight="14.0" prefWidth="107.0" />
+            <JFXButton fx:id="courseButton" buttonType="RAISED" onMouseClicked="#handleClicks" prefHeight="36.0" prefWidth="114.0" style="-fx-background-color: #FDFDFD;" text="Course" />
+            <VBox prefHeight="14.0" prefWidth="107.0" />
+            <JFXButton fx:id="scheduleButton" buttonType="RAISED" onMouseClicked="#handleClicks" prefHeight="36.0" prefWidth="114.0" style="-fx-background-color: #FDFDFD;" text="Schedule" />
+            <VBox prefHeight="14.0" prefWidth="107.0" />
+            <JFXButton fx:id="electivecourseButton" buttonType="RAISED" onMouseClicked="#handleClicks" prefHeight="36.0" prefWidth="114.0" style="-fx-background-color: #FDFDFD;" text="Electivecourse" />
+            <VBox prefHeight="14.0" prefWidth="107.0" />
+            <JFXButton fx:id="searchButton" buttonType="RAISED" onMouseClicked="#handleClicks" prefHeight="36.0" prefWidth="114.0" style="-fx-background-color: #FDFDFD;" text="Search" />
+         </children>
+      </VBox>
+      <FontAwesomeIconView fx:id="closeButton" glyphName="CLOSE" layoutX="646.0" layoutY="24.0" onMouseClicked="#closeClick" />
+      <VBox alignment="CENTER_LEFT" layoutX="201.0" layoutY="135.0" prefHeight="36.0" prefWidth="192.0">
+         <children>
+            <JFXTextField fx:id="addText" focusColor="BLACK" prefHeight="31.0" prefWidth="192.0" unFocusColor="WHITE" />
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </VBox>
+      <VBox layoutX="142.0" layoutY="135.0" prefHeight="36.0" prefWidth="100.0">
+         <children>
+            <JFXButton fx:id="addButton" buttonType="RAISED" onMouseClicked="#addClicks" prefHeight="36.0" prefWidth="56.0" style="-fx-background-color: #FDFDFD; -fx-background-radius: 15;" text="Add" />
+         </children>
+      </VBox>
+      <Pane layoutX="348.0" layoutY="49.0" prefHeight="77.0" prefWidth="354.0" style="-fx-background-color: #808080; -fx-background-radius: 50;">
+         <children>
+            <Text fx:id="textStatus" fill="#fffdfd" layoutX="31.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.13671875">
+               <font>
+                  <Font name="Calibri" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <StackPane layoutX="148.0" layoutY="196.0">
+         <children>
+            <GridPane fx:id="searchPane" prefHeight="230.0" prefWidth="500.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="searchTable" prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="searchCoulumStudent" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Student" />
+                        <TableColumn fx:id="searchCoulumCourse" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Course" />
+                        <TableColumn fx:id="searchCoulumTeacher" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Teacher" />
+                        <TableColumn fx:id="searchCoulumClassroom" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Classroom" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </GridPane>
+            <GridPane fx:id="electivecoursePane" prefHeight="230.0" prefWidth="500.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="electivecourseTable" prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="electiveColumnID" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="ID" />
+                        <TableColumn fx:id="electiveColumnSid" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Student ID" />
+                        <TableColumn fx:id="electiveColumnClassid" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Class ID" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </GridPane>
+            <GridPane fx:id="schedulePane" prefHeight="230.0" prefWidth="500.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="scheduleTable" prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="scheduleColumClassid" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Class ID" />
+                        <TableColumn fx:id="scheduleColumCid" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Course ID" />
+                        <TableColumn fx:id="scheduleColumTid" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Teacher ID" />
+                        <TableColumn fx:id="scheduleColumClassroom" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Classroom" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </GridPane>
+            <GridPane fx:id="coursePane" prefHeight="230.0" prefWidth="500.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="courseTable" prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="courseCoulumID" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="ID" />
+                        <TableColumn fx:id="courseCoulumName" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Name" />
+                        <TableColumn fx:id="courseCoulumHour" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Hour" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </GridPane>
+            <GridPane fx:id="teacherPane" prefHeight="230.0" prefWidth="500.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="teacherTable" prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="teacherColumnID" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="ID" />
+                        <TableColumn fx:id="teacherColumnName" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Name" />
+                        <TableColumn fx:id="teacherColumnSex" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Sex" />
+                        <TableColumn fx:id="teacherColumnAge" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Age" />
+                        <TableColumn fx:id="teacherColumnTitle" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Title" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </GridPane>
+            <GridPane fx:id="studentPane" prefHeight="230.0" prefWidth="500.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TableView fx:id="studentTable" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="studentColumnID" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="ID" />
+                      <TableColumn fx:id="studentColumnName" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Name" />
+                        <TableColumn fx:id="studentColumnSex" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Sex" />
+                        <TableColumn fx:id="studentColumnAge" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Age" />
+                        <TableColumn fx:id="studentColumnMajor" prefWidth="75.0" style="-fx-background-color: #e9e9e9;" text="Major" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
