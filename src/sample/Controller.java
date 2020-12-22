@@ -287,7 +287,10 @@ public class Controller implements Initializable {
             if (Main.accountType.equals("Student"))
             {
                 teacherButton.setDisable(true);
-
+                studentButton.setDisable(true);
+                electivecourseButton.setDisable(true);
+                scheduleButton.setDisable(true);
+                courseButton.setDisable(true);
             }
             MyFile studentFile = new MyFile("Student.ser");
             MyFile teacherFile = new MyFile("Teacher.ser");

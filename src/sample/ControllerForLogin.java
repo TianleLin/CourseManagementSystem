@@ -34,7 +34,7 @@ public class ControllerForLogin {
     public void handleClicks(MouseEvent mouseEvent) throws Exception {
         boolean foundFlag = false;
         if (mouseEvent.getSource() == loginButton) {
-            ArrayList allAccount = Login.accountFile.read();
+            ArrayList allAccount = Login.ac·countFile.read();
             for (Object oneAccount : allAccount) {
                 if (oneAccount.getClass().getName() == "sample.Account") {
                     Account one = (Account) oneAccount;
