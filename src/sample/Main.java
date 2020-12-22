@@ -10,15 +10,18 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.IOException;
+
 public class Main extends Application {
     double xOffset;
     double yOffset;
-    public void start(Stage primaryStage) throws Exception{
+    Stage stage= new Stage();
+    public void start(Stage mainStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Lin");
-        primaryStage.initStyle(StageStyle.TRANSPARENT);
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
+        mainStage.setTitle("Lin");
+        mainStage.initStyle(StageStyle.TRANSPARENT);
+        mainStage.setScene(new Scene(root));
+        mainStage.show();
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -29,14 +32,13 @@ public class Main extends Application {
         root.setOnMouseDragged(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                primaryStage.setX(mouseEvent.getScreenX()-xOffset);
-                primaryStage.setY(mouseEvent.getScreenY()-yOffset);
+                mainStage.setX(mouseEvent.getScreenX() - xOffset);
+                mainStage.setY(mouseEvent.getScreenY() - yOffset);
             }
         });
     }
-
-
-    public static void main(String[] args) {
-        launch(args);
+    public void showWindow() throws Exception {
+        start(stage);
     }
+
 }

@@ -253,7 +253,6 @@ public class Controller implements Initializable {
         //下同
         if (textStatus.getText().equals("Teachers")) {
             addTeacher();
-
         }
         if (textStatus.getText().equals("Courses"))
         {
