@@ -180,7 +180,8 @@ public class Controller implements Initializable {
     @FXML
     private TableColumn<Teacher,String> teacherColumnTitle;
 
-
+    @FXML
+    private  JFXButton welcomeTitle;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -275,6 +276,19 @@ public class Controller implements Initializable {
     public void initTable()
     {
         try {
+            welcomeTitle.setText("Welcome, "+Main.accountName);
+            if (Main.accountType.equals("Teacher"))
+            {
+                searchButton.setDisable(true);
+                studentButton.setDisable(true);
+                teacherButton.setDisable(true);
+                electivecourseButton.setDisable(true);
+            }
+            if (Main.accountType.equals("Student"))
+            {
+                teacherButton.setDisable(true);
+
+            }
             MyFile studentFile = new MyFile("Student.ser");
             MyFile teacherFile = new MyFile("Teacher.ser");
             MyFile courseFile = new MyFile("Course.ser");

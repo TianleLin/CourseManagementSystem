@@ -1,5 +1,6 @@
 package sample;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -13,11 +14,14 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 public class Main extends Application {
+    public static String accountType="teacher";
+    public static String accountName="余时伟";
     double xOffset;
     double yOffset;
     Stage stage= new Stage();
     public void start(Stage mainStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
         mainStage.setTitle("Lin");
         mainStage.initStyle(StageStyle.TRANSPARENT);
         mainStage.setScene(new Scene(root));

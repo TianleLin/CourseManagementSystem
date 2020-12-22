@@ -22,7 +22,7 @@
          <children>
             <VBox prefHeight="187.0" prefWidth="181.0">
                <children>
-                  <JFXButton buttonType="RAISED" prefHeight="200.0" prefWidth="195.0" text="Course Management">
+                  <JFXButton fx:id="welcomeTitle" buttonType="RAISED" prefHeight="200.0" prefWidth="195.0" text="Course Management">
                      <font>
                         <Font name="Cambria" size="18.0" />
                      </font></JFXButton>
