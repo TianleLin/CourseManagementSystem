@@ -14,7 +14,7 @@
 
 ##### 	程序界面
 
-​	<img src="C:\Users\Lin\OneDrive\UESTC\SophomoreFirstSemester\Object-orientedProgrammingJava\JavaExperiment\CourseManagementSystemGUI\images\Menu.png" alt="Menu" style="zoom:38%;" />
+​	<img src="https://github.com/TianleLin/CourseManagementSystem/blob/master/images/Menu.png" alt="Menu" style="zoom:38%;" />
 
 ##### 	
 
@@ -26,11 +26,11 @@
 
 ​	搜索：点击Search按钮进入search界面（如下）
 
-<img src="C:\Users\Lin\OneDrive\UESTC\SophomoreFirstSemester\Object-orientedProgrammingJava\JavaExperiment\CourseManagementSystemGUI\images\Search.png" alt="Search" style="zoom:38%;" />
+<img src="https://github.com/TianleLin/CourseManagementSystem/blob/master/images/Search.png" alt="Search" style="zoom:38%;" />
 
 ​	输入sid进行搜索，搜索结果在表中呈现（如下）：
 
-<img src="C:\Users\Lin\OneDrive\UESTC\SophomoreFirstSemester\Object-orientedProgrammingJava\JavaExperiment\CourseManagementSystemGUI\images\SearchResult.png" alt="SearchResult" style="zoom:38%;" />
+<img src="https://github.com/TianleLin/CourseManagementSystem/blob/master/images/SearchResult.png" alt="SearchResult" style="zoom:38%;" />
 
 ​	表中的内容都是动态更新的，因此无需点击按钮打印所有的数据。
 
